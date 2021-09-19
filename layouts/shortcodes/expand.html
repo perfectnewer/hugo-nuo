@@ -1,0 +1,7 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<details>
+    <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
+        {{ with .Get 0}}<font color='#c7254e' size='3px'>{{.}}</font>{{else}}click to expand{{ end }}
+    </summary>
+    {{.Inner}}
+</details>
