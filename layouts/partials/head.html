@@ -28,7 +28,7 @@
   {{ with .Site.DisqusShortname }}<link href="//c.disquscdn.com" rel="dns-prefetch">{{ end }}
   {{ with .Site.Params.Gitment }}<link href="//imsun.github.io" rel="dns-prefetch">{{ end }}
   {{ with .Site.GoogleAnalytics }}<link href="//www.google-analytics.com" rel="dns-prefetch">{{ end }}
-  {{ with .Site.Params.baidutongji }}<link href="//hm.baidu.com" rel="dns-prefetch">{{ end }}
+  {{ with not .Site.IsServer | and .Site.Params.baidutongji }}<link href="//hm.baidu.com" rel="dns-prefetch">{{ end }}
 
   {{ if and (eq .Kind "page") (eq .Type "post") }}
 

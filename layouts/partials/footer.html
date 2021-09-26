@@ -61,7 +61,7 @@
 {{ end }}
 
 <!-- Baidu Tongji -->
-{{ with .Site.Params.baidutongji }}
+{{ with not .Site.IsServer | and .Site.Params.baidutongji }}
 <script>
 var _hmt = _hmt || [];
 (function() {
