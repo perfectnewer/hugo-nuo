@@ -295,6 +295,22 @@
           </a>
         </li>
       {{- end -}}
+
+      {{- with .Site.Params.csdn -}}
+      <li class="social-item">
+        <a rel="me" href="//blog.csdn.net/{{ . | relURL }}" title="csdn" aria-label="csdn">
+          <span class="csdnIcon" aria-hidden="true"> <p>csdn</p>
+        </a>
+      </li>
+      {{- end -}}
+
+      {{- with .Site.Params.gitee -}}
+      <li class="social-item">
+        <a rel="me" href="//{{ . | relURL }}.gitee.io" title="gitee" aria-label="gitee">
+          <span class="gitee" aria-hidden="true"> <p>gitee</p>
+        </a>
+      </li>
+      {{- end -}}
     </ul>
   </nav>
 </header>
